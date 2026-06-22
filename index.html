@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Smart Blood Distribution</title>
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/2966/2966484.png">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  
+<div class="container">
+
+    <!-- Header -->
+    <h1>🩸 Smart Blood Distribution System</h1>
+
+    <!-- Dashboard Cards -->
+    <div class="dashboard-cards">
+
+        <div class="card">
+            <h3>Total Requests</h3>
+            <p id="totalRequests">0</p>
+        </div>
+
+        <div class="card">
+            <h3>Fulfilled Requests</h3>
+            <p id="fulfilledRequests">0</p>
+        </div>
+
+        <div class="card">
+            <h3>Available Units</h3>
+            <p id="availableUnits">0</p>
+        </div>
+
+        <div class="card">
+            <h3>Emergency Cases</h3>
+            <p id="emergencyRequests">0</p>
+        </div>
+
+    </div>
+
+    <!-- Request Form -->
+    <h2>Blood Request Form</h2>
+
+    <form id="requestForm">
+
+        <input
+            type="text"
+            id="hospital"
+            placeholder="Hospital Name"
+            required
+        >
+
+        <input
+            type="text"
+            id="bloodType"
+            placeholder="🩸 Blood Type (A+, B+, O-, etc.)"
+            required
+        >
+
+        <input
+            type="number"
+            id="units"
+            placeholder=" Units Needed"
+            required
+        >
+
+        <input
+            type="number"
+            id="urgency"
+            min="1"
+            max="3"
+            placeholder="🚨 Urgency (1=High, 3=Low)"
+            required
+        >
+
+        <input
+            type="number"
+            id="distance"
+            placeholder="📍 Distance (km)"
+            required
+        >
+
+        <button type="submit">
+            Submit Blood Request
+        </button>
+
+    </form>
+
+    <!-- Action Buttons -->
+    <div class="action-buttons">
+
+        <button id="refreshBtn">
+            🔄 Refresh Data
+        </button>
+
+    </div>
+
+    <!-- Requests Section -->
+    <h2>Blood Requests</h2>
+
+    <table>
+
+        <thead>
+            <tr>
+                <th>Hospital</th>
+                <th>Blood Type</th>
+                <th>Units</th>
+                <th>Urgency</th>
+                <th>Distance</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+
+        <tbody id="requestTable">
+            <!-- Data Loaded by JavaScript -->
+        </tbody>
+
+    </table>
+
+    <!-- Inventory Section -->
+    <h2>Blood Inventory</h2>
+
+    <table>
+
+        <thead>
+            <tr>
+                <th>Blood Type</th>
+                <th>Available Units</th>
+            </tr>
+        </thead>
+
+        <tbody id="inventoryTable">
+            <!-- Data Loaded by JavaScript -->
+        </tbody>
+
+    </table>
+
+    <!-- Footer -->
+    <footer>
+        <p>
+            Smart Blood Distribution System © 2026
+        </p>
+    </footer>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
